@@ -37,7 +37,6 @@ def predict_stress_anxiety(stringInput):
     data = np.array(data)
     sequences = tokenizer.texts_to_sequences(data)
     tweet = pad_sequences(sequences, maxlen=400)
-    print(tweet)
     prediction = model.predict(tweet)
     prediction = np.around(prediction, decimals=0)
     if prediction == 1.0:
