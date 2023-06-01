@@ -7,3 +7,6 @@
 ### 2) Open a Command Prompt/terminal window in directory
 ### 3) Install requirements using the command "pip install -r requirements.txt"
 ### 4) Run using the command "streamlit run app.py"
+
+
+Stress-Anxiety-Detector.ipynb File includes all the implementation of the extracted model.h5
