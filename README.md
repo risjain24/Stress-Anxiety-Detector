@@ -1,5 +1,10 @@
 # Stress-Anxiety-Detector
 
+## Introduction
+
+### A Stress and anxiety detector Trained on tweets and Facebook Comments during the Corona Period.
+### Can work on any tweet, comment or text generated from some other source.
+
 ## Requirements have been specified for python 3.8.4 or higher
 
 ## Steps to run:-
