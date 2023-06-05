@@ -44,11 +44,40 @@ def predict_stress_anxiety(stringInput):
 
 def main():
     preprocessing()
-    st.title("Stress Anxiety Detector")
-    input = st.text_input("Enter a Comment/Tweet","Type Here")
+    st.markdown(
+        """
+        <style>
+        .title-container {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        .title-text {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333333;
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+    st.markdown(
+        """
+        <div class="title-container">
+            <div class="title-text">Stress Anxiety Detector</div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+    usernameInput = st.text_input("Enter Your Name: ","Type Here...")
+    inputComment = st.text_input("Enter a Comment/Tweet","Type Here...")
+    age = st.slider("Select your age", min_value=0, max_value=100, value=30, step=1)
     result = 0.0
     if st.button("Predict"):
-        result = predict_stress_anxiety(input)
+        result = predict_stress_anxiety(inputComment)
         result = result[0][0].astype(float)
         resApprox = np.around(result, decimals=0)
         if resApprox == 1.0:
@@ -58,21 +87,29 @@ def main():
         else:
             st.markdown(
                 """
-                <div style="background-color: #f05b5b; padding: 10px; border-radius: 5px;">
+                <div style="background-color: #f05b5b; padding: 10px; border-radius: 5px; margin-bottom: 20px">
                 <span style="color: white;">No the statement does not show signs of Stress and Anxiety</span>
                 </div>
                 """,
                 unsafe_allow_html=True
             )
-            st.write("")
             st.text("Confidence Score : " + str(1-result))
             st.progress((1-result))
             
     if st.button("Help"):
         st.text("This is a Stress and Anxiety Detector.")
         st.text(" Enter a User's Tweet or Facebook Comment \n Or any other post in order to detect presence of stress or Anxiety")
+
+    st.header("Feedback or Suggestions")
+    feedback = st.text_area("Please share your feedback or suggestions:")
+    submit_button = st.button("Submit")
+    if submit_button:
+        st.success("Thank you for your feedback!")
+    
     if st.button("About"):
         st.text("Made with ♥ by Students of BVCOE, New Delhi")
+
+
 
 if __name__ == '__main__':
     main()
