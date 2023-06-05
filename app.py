@@ -105,11 +105,20 @@ def main():
     submit_button = st.button("Submit")
     if submit_button:
         st.success("Thank you for your feedback!")
+
+    st.markdown("## Resources and Support")
+    st.write("If you are experiencing stress or anxiety, here are some helpful resources and support options in India:")
+
+    st.markdown("- [National Institute of Mental Health and Neurosciences (NIMHANS)](https://www.nimhans.ac.in/)")
+    st.markdown("- [Vandrevala Foundation](https://vandrevalafoundation.com/)")
+    st.markdown("- [YourDost](https://yourdost.com/)")
+
+    st.write("Helpline numbers in India:")
+    st.write("- Vandrevala Foundation Helpline: 1860-2662-345 or 1800-2333-330")
+    st.write("- Snehi Helpline (for emotional support): +91-22-2772 6773 / 2772 6774")
     
     if st.button("About"):
         st.text("Made with ♥ by Students of BVCOE, New Delhi")
-
-
 
 if __name__ == '__main__':
     main()
