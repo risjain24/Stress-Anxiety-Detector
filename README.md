@@ -8,10 +8,12 @@
 ### Requirements have been specified for python 3.8.4 or higher
 
 ## Steps to run:-
-#### 1) Clone the Github Repositiory
-#### 2) Open a Command Prompt/terminal window in directory
-#### 3) Install requirements using the command "pip install -r requirements.txt"
-#### 4) Run using the command "streamlit run app.py"
+#### 1) Clone the Github Repositiory: - git clone https://github.com/risjain24/Stress-Anxiety-Detector
+#### 2) Create a Python environment: - python3 -m venv myenv
+#### 3) Activate the environment: - (For Windows) myenv\Scripts\activate (For Unix/macOS) source myenv/bin/activate
+#### 4) Install dependencies: - pip install -r requirements.txt
+#### 5) Run the application: streamlit run app.py
+#### 6) Access the application using the local host provided by streamlit
 
 
 Stress-Anxiety-Detector.ipynb File includes all the implementation of the extracted model.h5
